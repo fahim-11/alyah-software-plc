@@ -1,0 +1,18 @@
+{
+  "../../Alyah/frontend/src/asserts/images/alyah.jpg": {
+    "file": "assets/alyah-BQ9Vao_Y.jpg",
+    "src": "../../Alyah/frontend/src/asserts/images/alyah.jpg"
+  },
+  "resources/js/app.jsx": {
+    "file": "assets/app-CCqlR80B.js",
+    "name": "app",
+    "src": "resources/js/app.jsx",
+    "isEntry": true,
+    "css": [
+      "assets/app-DUuXvjzX.css"
+    ],
+    "assets": [
+      "assets/alyah-BQ9Vao_Y.jpg"
+    ]
+  }
+}

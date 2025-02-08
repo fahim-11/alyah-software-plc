@@ -1,0 +1,266 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #b2ffe1, #e4d8ff);
+    height: 100px;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 100px;
+    height: auto;
+}
+
+.logo {
+    height: 90px;
+    
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #222;
+    font-weight: bold;
+}
+.nav-links a:hover{
+    color: #9400d3;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 30px;
+}
+.actions a:hover{
+    color: #9400d3;
+}
+.search-icon:hover{
+    color: #9400d3;
+}
+.subscribe-btn {
+    margin-right: 20px;
+    color: #9400d3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sign-in-btn {
+    margin-right: 20px;
+    color: #222;
+    text-decoration: none;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #222;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        margin-left: 0;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background: white;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        z-index: 1000;
+       
+       
+        align-items: flex-start;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        padding: 10px 20px;
+    }
+
+    .actions {
+        display: none; 
+    }
+
+    .actions-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .actions-mobile .subscribe-btn,
+    .actions-mobile .sign-in-btn,
+    .actions-mobile .search-icon {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        font-size: 24px; 
+       
+    }
+
+    .menu-toggle.close {
+        color: red; 
+    }
+
+    .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: #222;
+        margin: 5px 0;
+    }
+}
+.sign-in-btn {
+    background-color: transparent; /* Make background transparent */
+   font-weight: 40px;
+    color: black; /* Change text color if needed */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-bottom: 8px;
+    border-color: transparent;
+   
+}
+
+.sign-in-btn:hover {
+    background-color:transparent; /* Light red background on hover */
+   color: #9400d3;
+}
+.password-container {
+    position: relative;
+    color: black;
+   
+}
+
+.password-container input {
+    width: calc(100% - 30px); /* Adjust width to accommodate the icon */
+    padding-right: 40px; /* Add padding to the right for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px; /* Position icon on the right */
+    top: 20%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    background: transparent; /* No background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    color: #222121; /* Set icon color to black */
+    font-size: 18px; /* Adjust icon size as needed */
+    transition: opacity 0.1s; /* Smooth transition for hover effect */
+}
+
+.toggle-password:hover {
+   
+    background-color: transparent;
+    color: #222;
+}
+/* Modal overlay and content styles */
+.modal-overlay {
+    position: fixed; /* Make it fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.modal-content {
+    background: linear-gradient(to right, #b2ffe1, #e4d8ff);
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+   
+}
+.modal-content button {
+    margin-right: 10px; /* Adjust the gap as needed */
+}
+
+.modal-content button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .actions {
+        display: none; /* Hide desktop actions on mobile */
+    }
+
+    .actions-mobile {
+        display: flex;
+        flex-direction: column; /* Stack actions in mobile */
+    }
+}
